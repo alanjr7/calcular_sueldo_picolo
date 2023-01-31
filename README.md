@@ -1,1 +1,1 @@
-# calcular_sueldo_picolo
+# calcular_sueldo_picolo para empleados
