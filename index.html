@@ -47,13 +47,14 @@ input[type="time"] {
 
 .section{
 width: 100%;
-height: 300px;
+height: 200px;
 background-color: rgb(159, 159, 159);
 text-align: center;
 margin-bottom:15px;
+border-radius: 10%;
 }
 .section p{
-padding-top:150px ;
+padding-top:90px ;
 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 footer {
@@ -175,12 +176,13 @@ input{
     <div id="botones">
         <div id="cajatext" style="display: flex;"> <p id="texto"> Aqui ingresa tus dias trabajados en la quincena:</p> <input type="number" id="diasTrabajados" class="input"></div>
             <button onclick="addInputFields(document.getElementById('diasTrabajados').value)"><p>ingresar dias</p></button>
-      <div  style="display: flex;" id="cajatextt"> <p id="texto"> Pago por hora: </p> <input type="number" id="rate" class="input"> </div>    
-      <button onclick="calculateSalary()"><p> Calcular sueldos</p> </button>
+      <div  style="display: flex;" id="cajatextt"> <p id="texto"> Pago por hora: </p> <input type="text" id="rate" class="input"> </div>    
+      <button onclick="calculateSalary()"><p> Calcular sueldo</p> </button>
     
     </div>
     <div id="result"></div>
-    <div class="section"><p>recuerda reclamar o denunciar siempre que tu sueldo no se sea igual al resultado de esta pagina</p></div>
+    <div class="section"><p>recuerda reclamar o denunciar siempre que tu sueldo no se sea igual al resultado de esta pagina</p>
+  </div>
     <footer><p>sindicato de trabajadores de picolo </p></footer>
     <script>
       
@@ -217,7 +219,7 @@ salary += hoursWorked * rate;
 
 
   }
-    document.getElementById("result").innerHTML = "Sueldo: $" + salary.toFixed(2);
+    document.getElementById("result").innerHTML = "Sueldo: " + salary.toFixed(2)+ 'bs';
     }
 
 
